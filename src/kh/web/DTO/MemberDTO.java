@@ -4,6 +4,10 @@ public class MemberDTO {
 	private String id;
 	private String name;
 	
+	public MemberDTO() {
+		
+	}
+	
 	public MemberDTO(String id, String name) {
 		super();
 		this.id = id;
