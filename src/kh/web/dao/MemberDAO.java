@@ -3,8 +3,11 @@ package kh.web.dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
-import javafx.util.converter.PercentageStringConverter;
+import kh.web.DTO.MemberDTO;
 
 public class MemberDAO {
 	private Connection getConnection() throws Exception {
@@ -31,4 +34,29 @@ public class MemberDAO {
 		
 		return result;
 	}
+	
+	public List<MemberDTO> selectData(String id) throws Exception{
+		Connection con = this.getConnection();
+		String sql = "SELECT * FROM IDNAME WHERE ID =?";
+		PreparedStatement pstat = con.prepareStatement(sql);
+		ResultSet rs = pstat.executeQuery();
+		
+		List<MemberDTO> list = new ArrayList<>();
+		
+		while(rs.next()) {
+			
+			MemberDTO dto = new MemberDTO();
+			
+			pstat.setString(1, rs.getString("id"));
+			pstat.setString(2,  rs.getString("name"));
+			
+			list.add(dto);
+		}
+		con.commit();
+		con.close();
+		rs.close();
+		
+		return list;
+	}
+	
 }
