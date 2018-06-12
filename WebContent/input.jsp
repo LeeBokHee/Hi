@@ -28,19 +28,5 @@
 			</td></tr>
 		</table>
 	</form>
-	
-	
-	<c:choose>
-		<c:when test="${result>0}">
-			<script>
-				alert("success"!")
-			</script>
-		</c:when>
-		<c:otherwise>
-			<script>
-				alert("failed"!")
-			</script>
-		</c:otherwise>
-	</c:choose>
 </body>
 </html>

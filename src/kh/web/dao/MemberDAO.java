@@ -40,16 +40,12 @@ public class MemberDAO {
 		String sql = "SELECT * FROM IDNAME";
 		PreparedStatement pstat = con.prepareStatement(sql);
 		ResultSet rs = pstat.executeQuery();
-		
 		List<MemberDTO> list = new ArrayList<>();
 		
 		while(rs.next()) {
-			
 			MemberDTO dto = new MemberDTO();
-			
-			pstat.setString(1, rs.getString("id"));
-			pstat.setString(2, rs.getString("name"));
-			
+			dto.setId(rs.getString("id"));
+			dto.setName(rs.getString("name"));
 			list.add(dto);
 		}
 		con.commit();

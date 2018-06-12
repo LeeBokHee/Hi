@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<table>
+<table border=1>
 <tr>
 <th colspan=2>GIT MEMBER</th>
 </tr>

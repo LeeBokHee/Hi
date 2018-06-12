@@ -30,8 +30,10 @@ public class FrontController extends HttpServlet {
 				String name = request.getParameter("name");
 				int result = memDAO.insertDate(id, name);
 				request.setAttribute("result", result);
+				
 				isRedirect = false;
-				dst = "input.jsp";
+				dst = "inputView.jsp";
+				
 			}else if(command.equals("/output.do")) {
 				List<MemberDTO> list = new ArrayList<>();
 				list = memDAO.selectAllData();
@@ -46,6 +48,7 @@ public class FrontController extends HttpServlet {
 				RequestDispatcher rd = request.getRequestDispatcher(dst);
 				rd.forward(request, response);
 			}
+			
 		}catch(Exception e) {
 			e.printStackTrace();
 		}

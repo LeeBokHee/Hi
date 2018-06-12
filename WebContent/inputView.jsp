@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -9,22 +8,19 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<table border=1>
-		<c:choose>
-			<c:when test="${list.size() == 0}">
-				<tr>
-					<th>No Info</th>
-				</tr>
-			</c:when>
-			<c:otherwise>
-				<c:forEach var="mem" items="${list}">
-					<tr>
-						<td>${mem.id}</td>
-						<td>${mem.name}</td>
-					</tr>
-				</c:forEach>
-			</c:otherwise>
-		</c:choose>
-	</table>
+	<c:choose>
+		<c:when test="${result>0}">
+			<script>
+			alert("success!!");
+				location.href = "index.jsp";
+			</script>
+		</c:when>
+		<c:otherwise>
+			<script>
+			alert("failed!!");
+				location.href = "index.jsp";
+			</script>
+		</c:otherwise>
+	</c:choose>
 </body>
 </html>
