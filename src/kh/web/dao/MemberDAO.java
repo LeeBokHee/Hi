@@ -35,9 +35,9 @@ public class MemberDAO {
 		return result;
 	}
 	
-	public List<MemberDTO> selectData(String id) throws Exception{
+	public List<MemberDTO> selectAllData() throws Exception{
 		Connection con = this.getConnection();
-		String sql = "SELECT * FROM IDNAME WHERE ID =?";
+		String sql = "SELECT * FROM IDNAME";
 		PreparedStatement pstat = con.prepareStatement(sql);
 		ResultSet rs = pstat.executeQuery();
 		
@@ -48,7 +48,7 @@ public class MemberDAO {
 			MemberDTO dto = new MemberDTO();
 			
 			pstat.setString(1, rs.getString("id"));
-			pstat.setString(2,  rs.getString("name"));
+			pstat.setString(2, rs.getString("name"));
 			
 			list.add(dto);
 		}
