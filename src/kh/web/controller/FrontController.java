@@ -14,9 +14,6 @@ import javax.servlet.http.HttpServletResponse;
 import kh.web.DTO.MemberDTO;
 import kh.web.dao.MemberDAO;
 
-/**
- * Servlet implementation class FrontController
- */
 @WebServlet("*.do")
 public class FrontController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
