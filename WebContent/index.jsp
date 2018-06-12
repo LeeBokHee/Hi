@@ -12,8 +12,8 @@
 <th colspan=2>GIT MEMBER</th>
 </tr>
 <tr>
-<td><input type=button id=input>Input</td>
-<td><input type="button" id=output>output></td>
+<td><input type=button id=input value=input></td>
+<td><input type="button" id=output value=output></td>
 </tr>
 </table>
 

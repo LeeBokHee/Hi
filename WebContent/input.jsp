@@ -23,8 +23,9 @@
 				<td><input type="text" name="name"></td>
 			</tr>
 			<tr>
-			<button ip=inputbtn>input!</button>
-			</tr>
+			<td colspan=2>
+			<button id=inputbtn>input!</button>
+			</td></tr>
 		</table>
 	</form>
 	
@@ -32,12 +33,12 @@
 	<c:choose>
 		<c:when test="${result>0}">
 			<script>
-				alert("성공!")
+				alert("success"!")
 			</script>
 		</c:when>
 		<c:otherwise>
 			<script>
-				alert("실패!")
+				alert("failed"!")
 			</script>
 		</c:otherwise>
 	</c:choose>
