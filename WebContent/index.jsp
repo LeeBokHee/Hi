@@ -9,7 +9,7 @@
 <body>
 <table border=1>
 <tr>
-<th colspan=2>GIT MEMBER</th>
+<th colspan=2>GIT MEMBER2</th>
 </tr>
 <tr>
 <td><input type=button id=input value=input></td>
