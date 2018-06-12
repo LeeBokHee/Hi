@@ -22,9 +22,13 @@
 				<td>Name :</td>
 				<td><input type="text" name="name"></td>
 			</tr>
+			<tr>
+			<button ip=inputbtn>input!</button>
+			</tr>
 		</table>
 	</form>
-
+	
+	
 	<c:choose>
 		<c:when test="${result>0}">
 			<script>
