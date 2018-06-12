@@ -7,15 +7,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="" method="get">
+<form action="input.do" method="get">
 	<table border=1 align="center" style="text-align:center">
-		<tr><td colspan=2 >정보를 입력 하세요.</td></tr>
+		<tr><td colspan=2 >Input Your Info</td></tr>
 		<tr>
 		<td>Id :</td>
 		<td><input type="text" name="id"></td>
 		</tr>
 		<tr>
-		<td>이름 :</td>
+		<td>Name :</td>
 		<td><input type="text" name="name"></td>
 		</tr>
 	</table>

@@ -23,6 +23,10 @@ document.getElementById("input").onclick = function() {
 	location.href = "input.jsp";
 }
 
+document.getElementById("output").onclick = function() {
+	location.href = "output.jsp";
+}
+
 </script>
 
 </body>
